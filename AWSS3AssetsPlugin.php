@@ -82,7 +82,7 @@ class AWSS3AssetsPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl()
     {
-        // @TODO
+        return 'https://raw.githubusercontent.com/jonnnnyw/craft-awss3assets/master/release.json';
     }
 
     /**
