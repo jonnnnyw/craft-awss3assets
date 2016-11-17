@@ -1,0 +1,41 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+	first:        true,
+	label:        "Bucket Region"|t,
+	required:     true,
+	id:           'bucketRegion',
+	name:         'bucketRegion',
+	instructions: "The AWS region associated with your bucket e.g. us-east-1."|t,
+	value:        settings.bucketRegion,
+	autofocus:    true,
+	errors:       settings.getErrors('bucketRegion')
+}) }}
+
+{{ forms.textField({
+	label:        "Bucket Name"|t,
+	required:     true,
+	id:           'bucketName',
+	name:         'bucketName',
+	instructions: "The name of your AWS S3 bucket."|t,
+	value:        settings.bucketName,
+	errors:       settings.getErrors('bucketName')
+}) }}
+
+{{ forms.textField({
+	label:        "AWS Key"|t,
+	id:           'awsKey',
+	name:         'awsKey',
+	instructions: "AWS IAM user key. If left blank then then AWS SDK will try and use your instance metadata to authenticate."|t,
+	value:        settings.awsKey,
+	errors:       settings.getErrors('awsKey')
+}) }}
+
+{{ forms.textField({
+	label:        "AWS Secret"|t,
+	id:           "awsSecret",
+	name:         "awsSecret",
+	instructions: "AWS IAM user secret. If left blank then then AWS SDK will try and use your instance metadata to authenticate."|t,
+	value:        settings.awsSecret,
+	errors:       settings.getErrors('awsSecret')
+}) }}
