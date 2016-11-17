@@ -71,7 +71,7 @@ class AWSS3AssetsPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        // @TODO
+        return 'https://github.com/jonnnnyw/craft-awss3assets/blob/master/README.md';
     }
 
     /**
