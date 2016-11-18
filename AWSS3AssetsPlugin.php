@@ -102,6 +102,25 @@ class AWSS3AssetsPlugin extends BasePlugin
     }
 
     /**
+     * On before install
+     *
+     * @access public
+     * @return void
+     * @throws \Craft\CraftException
+     */
+    public function onBeforeInstall()
+    {
+        if (!class_exists('\JonnyW\AWSS3Assets\S3Bucket')) {
+
+            $autoload = realpath(dirname(__FILE__)) . '/../../../vendor/autoload.php';
+
+            throw new CraftException(
+                Craft::t('AWSS3AssetsPlugin could not locate an autoload file in {path}.', array('path' => $autoload))
+            );
+        }
+    }
+
+    /**
      * Initialize plugin.
      *
      * @access public
