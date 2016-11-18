@@ -20,6 +20,27 @@ use JonnyW\AWSS3Assets\Model\Settings;
 class AWSS3AssetsPlugin extends BasePlugin
 {
     /**
+     * Internal constructor
+     *
+     * - Autoload vendor libraries
+     *
+     * @access public
+     */
+    public function __construct()
+    {
+        $autoload = realpath(dirname(__FILE__)) . '/../../../vendor/autoload.php';
+
+        if (!file_exists($autoload)) {
+
+             craft()->userSession->setError(Craft::t('AWSS3AssetsPlugin could not locate an autoload file in {path}.', array('path' => $autoload)));
+
+             return;
+        }
+
+        @include_once $autoload;
+    }
+
+    /**
      * Get plugin name.
      *
      * @access public
