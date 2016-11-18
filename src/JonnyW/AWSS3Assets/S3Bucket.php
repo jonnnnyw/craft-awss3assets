@@ -96,12 +96,16 @@ class S3Bucket
      * Copy media.
      *
      * @access public
-     * @param  string      $path
-     * @param  string      $filename
-     * @return \Aws\Result
+     * @param  string            $path
+     * @param  string            $filename
+     * @return \Aws\Result|false
      */
     public function cp($path, $filename)
     {
+        if (!file_exists($path)) {
+            return false;
+        }
+
         $handle = fopen($path, 'r');
         $body   = fread($handle, filesize($path));
 

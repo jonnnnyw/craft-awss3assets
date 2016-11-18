@@ -109,11 +109,11 @@ class AWSS3AssetsPlugin extends BasePlugin
      */
     public function init()
     {
-        craft()->on('assets.onBeforeSaveAsset', function (Event $event) {
+        craft()->on('assets.onSaveAsset', function (Event $event) {
             $this->copyAsset($event->params['asset']);
         });
 
-        craft()->on('assets.onBeforeReplaceFile', function (Event $event) {
+        craft()->on('assets.onReplaceFile', function (Event $event) {
             $this->copyAsset($event->params['asset']);
         });
 
