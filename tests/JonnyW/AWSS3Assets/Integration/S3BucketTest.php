@@ -8,7 +8,7 @@
  */
 namespace Tests\JonnyW\AWSS3Assets\Integration;
 
-use Jonnyw\AWSS3Assets\S3Bucket;
+use JonnyW\AWSS3Assets\S3Bucket;
 
 /**
  * AWS S3 Assets
