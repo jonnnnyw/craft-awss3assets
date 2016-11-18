@@ -30,14 +30,9 @@ class AWSS3AssetsPlugin extends BasePlugin
     {
         $autoload = realpath(dirname(__FILE__)) . '/../../../vendor/autoload.php';
 
-        if (!file_exists($autoload)) {
-
-             craft()->userSession->setError(Craft::t('AWSS3AssetsPlugin could not locate an autoload file in {path}.', array('path' => $autoload)));
-
-             return;
+        if (file_exists($autoload)) {
+            @include_once $autoload;
         }
-
-        @include_once $autoload;
     }
 
     /**
