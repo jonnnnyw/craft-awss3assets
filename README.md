@@ -42,16 +42,16 @@ By default the plugin will look in your sites `~/vendor` folder for an autoload 
 
 After the plugin has been successfully installed, navigate to `Settings` in your Craft control panel. You should see **AWS S3 Assets** listed under the Plugins subheading. Here you will find the following settings:
 
-**Bucket Region**
+##### Bucket Region
 The AWS region that you created your S3 bucket in e.g. us-east-1. Please ensure the region is the same as your bucket or you will encounter an error.
 
-**Bucket Name**
+##### Bucket Name
 The name of your AWS S3 bucket. This is the name your provided when you created your bucket e.g. media.mywebsite.com.
 
-**AWS Key (optional)**
+##### AWS Key (optional)
 Your IAM user key. The IAM user associated with this key must have read/write access to your AWS S3 bucket.
 
-**AWS Secret (optional)**
+##### AWS Secret (optional)
 Your IAM user secret. The IAM user associated with this key must have read/write access to your AWS S3 bucket.
 
 **Note** If you are running your Craft application on an EC2 instance that already has access to your S3 bucket, then you can leave the IAM user credentials blank.
