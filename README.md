@@ -38,7 +38,7 @@ Install the **AWS S3 Assets** plugin using the `install` button in the list. At 
 
 By default the plugin will look in your sites `~/vendor` folder for an autoload file. This is the default install location for Composer. If you are using a custom Composer location and you haven't already included your `autoload.php` file in Craft, then you will need to do so before enabling this plugin. See the Composer [documentation](https://getcomposer.org/doc/) for more information.
 
-### _Three
+### Three
 
 After the plugin has been successfully installed, navigate to `Settings` in your Craft control panel. You should see **AWS S3 Assets** listed under the Plugins subheading. Here you will find the following settings:
 
