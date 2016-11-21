@@ -26,13 +26,19 @@ composer require jonnyw/craft-awss3assets
 Setup
 ---------------------
 
+### One
+
 After installing the plugin, navigate to `Settings > Plugins` in your Craft control panel. If you have installed the plugin correctly then you should see **AWS S3 Assets** in your plugin list. If you do not see **AWS S3 Assets** listed then ensure that the plugin is install in `~/craft/plugins/awss3assets/`.
+
+### Two
 
 Install the **AWS S3 Assets** plugin using the `install` button in the list. At this point you may receive the following error:
 
 `AWSS3AssetsPlugin could not locate an autoload file`
 
 By default the plugin will look in your sites `~/vendor` folder for an autoload file. This is the default install location for Composer. If you are using a custom Composer location and you haven't already included your `autoload.php` file in Craft, then you will need to do so before enabling this plugin. See the Composer [documentation](https://getcomposer.org/doc/) for more information.
+
+### Three
 
 After the plugin has been successfully installed, navigate to `Settings` in your Craft control panel. You should see **AWS S3 Assets** listed under the Plugins subheading. Here you will find the following settings:
 
@@ -49,6 +55,8 @@ Your IAM user key. The IAM user associated with this key must have read/write ac
 Your IAM user secret. The IAM user associated with this key must have read/write access to your AWS S3 bucket.
 
 **Note** If you are running your Craft application on an EC2 instance that already has access to your S3 bucket, then you can leave the IAM user credentials blank.
+
+### Four
 
 (optional) If you wish to serve your assets from an AWS CloudFront distribution, then you will need to create an asset source that points to CloudFront.
 
