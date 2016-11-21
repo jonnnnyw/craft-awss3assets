@@ -5,6 +5,8 @@ When you upload or replace an asset in the Craft control panel, your asset will 
 
 This plugin is useful for serving assets from a CloudFront CDN and makes load balancing your Craft app across multiple server instances, simpler.
 
+[![Total Downloads](https://poser.pugx.org/jonnyw/craft-awss3assets/downloads.png)](https://packagist.org/packages/jonnyw/craft-awss3assets) [![Latest Stable Version](https://poser.pugx.org/jonnyw/craft-awss3assets/v/stable.png)](https://packagist.org/packages/jonnyw/craft-awss3assets)
+
 Requirements
 ---------------------
 
