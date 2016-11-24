@@ -54,7 +54,7 @@ class AWSS3AssetsPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.1.0';
+        return '1.1.1';
     }
 
     /**
@@ -199,7 +199,7 @@ class AWSS3AssetsPlugin extends BasePlugin
         $settings = $this->getSettings();
         
         try {
-            $this->getS3Bucket()->cp($this->getAssetPath($asset), trim('/', $settings->bucketPath . '/' . $asset->filename));
+            $this->getS3Bucket()->cp($this->getAssetPath($asset), trim($settings->bucketPath . '/' . $asset->filename, '/'));
         } catch (\Exception $e) {
             throw new CraftException($e->getMessage());
         }
@@ -218,7 +218,7 @@ class AWSS3AssetsPlugin extends BasePlugin
         $settings = $this->getSettings();
         
         try {
-            $this->getS3Bucket()->rm(trim('/', $settings->bucketPath . '/' . $asset->filename));
+            $this->getS3Bucket()->rm(trim($settings->bucketPath . '/' . $asset->filename, '/'));
         } catch (\Exception $e) {
             throw new CraftException($e->getMessage());
         }
