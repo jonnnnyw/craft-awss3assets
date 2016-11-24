@@ -6,5 +6,13 @@
         "notes": [
             "[Added] Initial release"
         ]
+    },
+    {
+        "version": "1.1.0",
+        "downloadUrl": "https://github.com/jonnnnyw/craft-awss3assets/archive/v1.1.0.zip",
+        "date": "2016-11-24T10:30+00:00",
+        "notes": [
+            "[Added] Can now set S3 bucket upload path"
+        ]
     }
 ]

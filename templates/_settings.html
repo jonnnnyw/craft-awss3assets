@@ -23,6 +23,16 @@
 }) }}
 
 {{ forms.textField({
+	label:        "Bucket Path"|t,
+	required:     false,
+	id:           'bucketPath',
+	name:         'bucketPath',
+	instructions: "The subdirectory to upload your assets to. Leave blank to upload to the root of your S3 bucket."|t,
+	value:        settings.bucketPath,
+	errors:       settings.getErrors('bucketPath')
+}) }}
+
+{{ forms.textField({
 	label:        "AWS Key"|t,
 	id:           'awsKey',
 	name:         'awsKey',

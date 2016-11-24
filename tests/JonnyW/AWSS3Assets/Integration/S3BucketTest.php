@@ -53,6 +53,25 @@ class S3BucketTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test can copy new media
+     * to S3 bucket in subdirectory
+     *
+     * @return void
+     */
+    public function testCanCopyNewMediaToS3BucketInSubDirectory()
+    {
+        $file = 'assets/' . $this->getFileName();
+
+        $bucket = S3Bucket::getInstance('us-east-1', 'tests.jonnyw.me');
+        $bucket->cp(
+            $this->getFilePath(),
+            $file
+        );
+
+        $this->assertInstanceOf('\Aws\Result', $bucket->get($file));
+    }
+
+    /**
      * Test can delete media from
      * S3 bucket
      *

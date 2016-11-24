@@ -192,11 +192,14 @@ class AWSS3AssetsPlugin extends BasePlugin
      * @access public
      * @param  \Craft\AssetFileModel $asset
      * @return void
+     * @throws \Craft\Exception
      */
     public function copyAsset(AssetFileModel $asset)
     {
+        $settings = $this->getSettings();
+        
         try {
-            $this->getS3Bucket()->cp($this->getAssetPath($asset), $asset->filename);
+            $this->getS3Bucket()->cp($this->getAssetPath($asset), trim('/', $settings->bucketPath . '/' . $asset->filename));
         } catch (\Exception $e) {
             throw new CraftException($e->getMessage());
         }
@@ -208,11 +211,14 @@ class AWSS3AssetsPlugin extends BasePlugin
      * @access public
      * @param  \Craft\AssetFileModel $asset
      * @return void
+     * @throws \Craft\Exception
      */
     public function deleteAsset(AssetFileModel $asset)
     {
+        $settings = $this->getSettings();
+        
         try {
-            $this->getS3Bucket()->rm($asset->filename);
+            $this->getS3Bucket()->rm(trim('/', $settings->bucketPath . '/' . $asset->filename));
         } catch (\Exception $e) {
             throw new CraftException($e->getMessage());
         }

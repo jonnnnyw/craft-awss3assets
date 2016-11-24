@@ -29,6 +29,7 @@ class Settings extends BaseModel
         return array(
             'bucketRegion' => array(AttributeType::String, 'required' => true),
             'bucketName'   => array(AttributeType::String, 'required' => true),
+            'bucketPath'   => array(AttributeType::String, 'required' => false),
             'awsKey'       => array(AttributeType::String, 'required' => false),
             'awsSecret'    => array(AttributeType::String, 'required' => false)
         );

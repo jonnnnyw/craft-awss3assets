@@ -50,6 +50,9 @@ The AWS region that you created your S3 bucket in e.g. us-east-1. Please ensure 
 ##### Bucket Name
 The name of your AWS S3 bucket. This is the name your provided when you created your bucket e.g. media.mywebsite.com.
 
+##### Bucket Path (optional)
+Path to upload assets to in your S3 bucket. If left blank it will upload assets to the root of your S3 bucket.
+
 ##### AWS Key (optional)
 Your IAM user key. The IAM user associated with this key must have read/write access to your AWS S3 bucket.
 
@@ -62,4 +65,4 @@ Your IAM user secret. The IAM user associated with this key must have read/write
 
 If you wish to serve your assets from an AWS CloudFront distribution, then you will need to create an asset source that points to CloudFront.
 
-Navigate to `Settings > Assets` in your Craft control panel. Click `New asset source`. Configure your asset source as your normally would with the exception of the URL field. Here you will need to add the URL of your CloudFront distribution. More information can be found on setting up a CloudFront distribution, in the [documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html).
+Navigate to `Settings > Assets` in your Craft control panel. Click `New asset source`. Configure your asset source as you normally would with the exception of the URL field. Here you will need to add the URL of your CloudFront distribution. More information can be found on setting up a CloudFront distribution, in the [documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html).
