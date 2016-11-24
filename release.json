@@ -20,7 +20,15 @@
         "downloadUrl": "https://github.com/jonnnnyw/craft-awss3assets/archive/v1.1.1.zip",
         "date": "2016-11-24T10:48+00:00",
         "notes": [
-            "[Added] Trimming filename was returning a blank string"
+            "[Fixed] Trimming filename was returning a blank string"
+        ]
+    },
+    {
+        "version": "1.2.0",
+        "downloadUrl": "https://github.com/jonnnnyw/craft-awss3assets/archive/v1.2.0.zip",
+        "date": "2016-11-24T12:00+00:00",
+        "notes": [
+            "[Added] Adding conent type to S3 putObject"
         ]
     }
 ]

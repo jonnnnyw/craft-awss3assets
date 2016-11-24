@@ -105,6 +105,8 @@ class S3Bucket
         if (!file_exists($path)) {
             return false;
         }
+        
+        $type = mime_content_type($path);
 
         $handle = fopen($path, 'r');
         $body   = fread($handle, filesize($path));
@@ -113,9 +115,10 @@ class S3Bucket
 
         $result = $this->client
             ->putObject(array(
-                'Bucket' => $this->name,
-                'Key'    => $filename,
-                'Body'   => $body
+                'Bucket'      => $this->name,
+                'Key'         => $filename,
+                'ContentType' => $type,
+                'Body'        => $body
             ));
 
         return $result;
